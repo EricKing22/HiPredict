@@ -1,6 +1,6 @@
 # HiPredict
 
-**Paper:** preprint coming soon · **Model:** [ardan-S/HiPredict](https://huggingface.co/ardan-S/HiPredict) on Hugging Face ([doi:10.57967/hf/11018](https://doi.org/10.57967/hf/11018)) · **Dataset:** [ardan-S/HiPredict](https://huggingface.co/datasets/ardan-S/HiPredict) on Hugging Face ([doi:10.57967/hf/11017](https://doi.org/10.57967/hf/11017))
+**Paper:** preprint coming soon · **Model:** [ardan-S/HiPredict](https://huggingface.co/ardan-S/HiPredict) on Hugging Face ([doi:10.57967/hf/11018](https://doi.org/10.57967/hf/11018)) · **Dataset:** [ardan-S/HiPredict](https://huggingface.co/datasets/ardan-S/HiPredict) on Hugging Face ([doi:10.57967/hf/11017](https://doi.org/10.57967/hf/11017)) · **Code:** archived on Zenodo ([doi:10.5281/zenodo.23414377](https://doi.org/10.5281/zenodo.23414377))
 
 HiPredict reconstructs the RED4 channel of the HiRISE camera on the Mars Reconnaissance Orbiter. The RED4 detector has partially failed. HiPredict predicts RED4 from the instrument's other channels: the IR10 and BG12 colour bands, which image the same ground as RED4, and the neighbouring RED3 and RED5 detectors.
 
