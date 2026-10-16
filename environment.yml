@@ -1,0 +1,10 @@
+name: hipredict
+# Optional Python environment. ISIS and HiPROC stay in separate environments.
+# pyproject.toml and uv.lock are the canonical dependency definitions.
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -e .[train,postprocess,dev]

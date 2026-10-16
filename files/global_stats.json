@@ -1,0 +1,212 @@
+{
+  "absolute_deviation_from_center": {
+    "absdev_p001": 5.5193528422884854e-05,
+    "absdev_p01": 0.0005898901929252464,
+    "absdev_p05": 0.0028923002391595563,
+    "absdev_p10": 0.0057132379261403505,
+    "absdev_p25": 0.013524341747066588,
+    "absdev_p50": 0.025842596403423894,
+    "absdev_p75": 0.04736784000034908,
+    "absdev_p90": 0.09247539727338969,
+    "absdev_p95": 0.11680325224482077,
+    "absdev_p99": 0.15340227655659433,
+    "absdev_p999": 0.18479107401532693,
+    "max": 0.7921935946857287
+  },
+  "failures": {
+    "deviation_pass": [],
+    "truncated_to": 20,
+    "value_pass": [
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020583_1420 BG12, found 0.')",
+        "obs": "ESP_020583_1420",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020795_1635 BG12, found 0.')",
+        "obs": "ESP_020795_1635",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020784_1810 BG12, found 0.')",
+        "obs": "ESP_020784_1810",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020803_1355 BG12, found 0.')",
+        "obs": "ESP_020803_1355",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020827_1595 BG12, found 0.')",
+        "obs": "ESP_020827_1595",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020857_1440 BG12, found 0.')",
+        "obs": "ESP_020857_1440",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020858_1425 BG12, found 0.')",
+        "obs": "ESP_020858_1425",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020911_1850 BG12, found 0.')",
+        "obs": "ESP_020911_1850",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_020926_1470 BG12, found 0.')",
+        "obs": "ESP_020926_1470",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_021670_1540 BG12, found 0.')",
+        "obs": "ESP_021670_1540",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_021712_1400 BG12, found 0.')",
+        "obs": "ESP_021712_1400",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022655_2040 BG12, found 0.')",
+        "obs": "ESP_022655_2040",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022654_1475 BG12, found 0.')",
+        "obs": "ESP_022654_1475",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022658_0945 BG12, found 0.')",
+        "obs": "ESP_022658_0945",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022679_0980 BG12, found 0.')",
+        "obs": "ESP_022679_0980",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022659_1505 BG12, found 0.')",
+        "obs": "ESP_022659_1505",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022675_1345 BG12, found 0.')",
+        "obs": "ESP_022675_1345",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022842_0950 BG12, found 0.')",
+        "obs": "ESP_022842_0950",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022856_0930 BG12, found 0.')",
+        "obs": "ESP_022856_0930",
+        "ok": false
+      },
+      {
+        "error": "FileNotFoundError('Expected exactly one processed cube for ESP_022902_1150 BG12, found 0.')",
+        "obs": "ESP_022902_1150",
+        "ok": false
+      }
+    ]
+  },
+  "histogram": {
+    "bins": 131072,
+    "deviation_max": 0.7921935946857287,
+    "deviation_method": "derived_from_value_histogram_bin_centers",
+    "deviation_min": 0.0,
+    "value_max": 1.0,
+    "value_min": -1.0
+  },
+  "masked_predictor_values": {
+    "count": 1977534690044,
+    "max": 0.8600634932518005,
+    "mean": 0.085464824844424,
+    "min": -0.0003434419631958008,
+    "std": 0.048467949526196395,
+    "value_p001": 0.013846640691511638,
+    "value_p01": 0.024083678436135264,
+    "value_p05": 0.03239613464916761,
+    "value_p10": 0.03775538329422109,
+    "value_p25": 0.04880939249505861,
+    "value_p50": 0.06786989856607184,
+    "value_p75": 0.11422493502933787,
+    "value_p90": 0.160346545238939,
+    "value_p95": 0.18467139311621353,
+    "value_p99": 0.22126919423075966,
+    "value_p999": 0.252662901247848
+  },
+  "normalization": {
+    "center": 0.06786989856607184,
+    "mad": 0.025842596403423894,
+    "method": "histogram_approximation_over_cropped_valid_BG12_IR10_pixels",
+    "mode": "global_robust",
+    "scale": 0.03831423342771626,
+    "scale_formula": "max(1.4826 * MAD, 1e-3)"
+  },
+  "observation_level_distribution": {
+    "obs_center_max": 0.23624444007873535,
+    "obs_center_min": 0.011698901653289795,
+    "obs_center_p25": 0.051883772015571594,
+    "obs_center_p50": 0.06849920749664307,
+    "obs_center_p75": 0.08676868677139282,
+    "obs_mad_max": 0.07490959763526917,
+    "obs_mad_min": 0.0013965368270874023,
+    "obs_mad_p25": 0.014079928398132324,
+    "obs_mad_p50": 0.021909713745117188,
+    "obs_mad_p75": 0.03176559507846832,
+    "obs_scale_max": 0.11106096945405006,
+    "obs_scale_min": 0.0020705054998397827,
+    "obs_scale_p25": 0.020874901843070982,
+    "obs_scale_p50": 0.03248334159851074,
+    "obs_scale_p75": 0.047095671263337135
+  },
+  "unmasked_finite_values": {
+    "BG12": {
+      "finite_count": 993630596003,
+      "finite_max": 0.5236114263534546,
+      "finite_min": -0.0003663301467895508,
+      "finite_sum": 55319734060.14028,
+      "finite_sumsq": 3711316171.137466,
+      "mean": 0.055674346465045106,
+      "missing_count": 470243397,
+      "near_zero_count": 470243429,
+      "nonfinite_count": 0,
+      "std": 0.025208604078141007
+    },
+    "IR10": {
+      "finite_count": 993630596003,
+      "finite_max": 0.8600634932518005,
+      "finite_min": -0.0003663301467895508,
+      "finite_sum": 113986496763.59375,
+      "finite_sumsq": 15402340695.42692,
+      "mean": 0.11471717680807969,
+      "missing_count": 4490070137,
+      "near_zero_count": 4490076666,
+      "nonfinite_count": 0,
+      "std": 0.0483843222418676
+    }
+  },
+  "validity": {
+    "above_hist_range": 0,
+    "below_hist_range": 0,
+    "cropped_pixels_per_predictor": 993630596003,
+    "observations_failed_deviation_pass": 0,
+    "observations_failed_value_pass": 2342,
+    "observations_requested": 19465,
+    "observations_succeeded": 17123,
+    "valid_bg_pixels": 993160352606,
+    "valid_ir_pixels": 989140525866,
+    "valid_pair_fraction": 0.9951055744453089,
+    "valid_pair_pixels": 988767345022
+  }
+}

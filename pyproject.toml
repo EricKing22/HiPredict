@@ -1,0 +1,71 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hipredict"
+version = "0.1.0"
+description = "Tools for reconstructing HiRISE RED4 data from neighboring detectors."
+authors = [{ name = "Ardan Suphi" }]
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "aiofiles",
+  "aiohttp",
+  "joblib",
+  "huggingface-hub>=0.24",
+  "matplotlib",
+  "numpy",
+  "pandas",
+  "pvl",
+  "PyYAML",
+  "requests",
+  "scikit-learn==1.6.1",
+  "tifffile",
+  "torch",
+]
+
+[project.optional-dependencies]
+notebooks = [
+  "ipython",
+  "jupyter",
+]
+train = [
+  "cartopy",
+  "piq",
+  "pyproj",
+  "scikit-image",
+  "shap",
+  "wandb",
+]
+postprocess = [
+  "cartopy",
+  "pyproj",
+  "scikit-image",
+  "shap",
+]
+dev = [
+  "pytest",
+]
+cube = [
+  "gdal",
+]
+all = [
+  "cartopy", "ipython", "jupyter", "piq", "pyproj",
+  "pytest", "scikit-image", "shap", "wandb",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hipredict*"]
+
+[tool.setuptools.package-data]
+# Ship the runtime configs (model/eval YAML, domain coordinate CSVs and the
+# global normalization statistics) inside the wheel so the package works when
+# installed without the source tree. Model weights are downloaded separately.
+hipredict = [
+  "configs/*.yaml", "configs/*.csv", "configs/*.json",
+  "data/*.sh", "inference/*.sh",
+]

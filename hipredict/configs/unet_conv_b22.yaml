@@ -1,0 +1,75 @@
+# --------------------------------------
+#         U-Net CNN - conv update but distinguishing betweed drs
+# --------------------------------------
+
+seed: 42
+
+wandb:
+  project: hirise-prediction
+  mode: disabled  # online | offline | disabled
+  group: null
+
+data:
+  root: null  # repository root; override for external data
+  patch_root: null  # relative manifest paths default to the CSV parent
+  data_record: "files/data_record_alls.csv"
+  normalisation_mode: global_robust
+  global_stats: "files/global_stats.json"
+  num_sets: 200000
+  train_size: 0.7
+  val_size:   0.1
+  test_size:  0.2
+  meta_cols: ['TDI', 'IEA_PWS_temp', 'Incidence_angle', 'Orbit_number', 'Local_time', 'Phase_angle', 'Solar_longitude', 'Solar_distance', 'FPA_negY_temp']
+  # meta_cols: ['TDI']
+
+architecture:
+  name: unet_conv_b22
+  version: 1.1
+  args:
+    base_ch: 16
+    depth: 4
+    kernel_size: 3
+    p_drop: 0.0
+    n_convs: 2
+    n_res_blocks: 2
+    align_corners: True
+
+optim:
+  epochs: 20
+  batch_size: 64
+  lr: 1.5e-3
+  weight_decay: 5.0e-5
+  early_stopping:
+    enabled: True
+    patience: 10
+    min_delta: 0.001
+    min_epochs: 12
+    restore_best: True
+
+loss:
+  name: HiRISELoss    # HiRISELoss | MSELoss | L1Loss
+  config:             # Only required for HiRISELoss
+    mae: 0.35         # L1
+    gdl: 0.15
+    local_mae: 0.10
+    mean_mae: 0.30
+    lf_l1: 0.10
+
+evals:
+  eval_dr: "files/data_record_evals.csv"
+  eval_cfg: "hipredict/configs/evals.yaml"
+  edr_csv: files/metadata/EDR_df.csv
+
+save:
+  imgs: False
+  imgs_indiv: False
+  model: True
+  loss_map: False
+  model_dir: null  # defaults from hipredict.paths
+  img_dir: null  # defaults from hipredict.paths
+  evals_dir: null  # defaults from hipredict.paths
+  maps_dir: null  # defaults from hipredict.paths
+flags:
+  evaluate: False  # requires a separate evaluation manifest
+  test: False
+  notrain: False

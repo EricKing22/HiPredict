@@ -1,0 +1,146 @@
+
+verbose: false
+
+standard_eval_observations:
+  enabled: false
+  data_record: "files/data_record_evals.csv"
+  count: 75
+  seed: 42
+  group: "standard_eval"
+  require_available_inputs: true
+  description: "standard eval"
+  npy_bands: 3
+  npy: ["hipredict"]
+  tif_bands: 3
+  tif: []
+  cub: []
+
+patch_comparison:
+  enabled: false
+  data_record: "files/data_record_evals.csv"
+
+# Per-format model selection (npy / tif / cub):
+#   - each takes a list of model names to export for that format, e.g.
+#       tif: ["hipredict", "SYN4"]   -> save both the main model and SYN4 as TIFF
+#       npy: ["hipredict"]           -> save only the main model as NumPy
+#       cub: []                          -> skip that format (false / null also work)
+#   - "hipredict" is the main model (files tagged "HiPredict"); "SYN4" is the baseline.
+#
+# Per-format band controls:
+#   - omit `npy_bands` or `tif_bands` to default that format to 1-band output
+#   - 1 -> predicted RED4 only
+#   - 3 -> stacked IR10 / predicted RED4 / BG12
+#   - [1, 3] -> save both variants for that format
+# Cube export remains single-band RED4 only.
+observations:
+  - id: "ESP_026473_2240"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_026802_2305"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_027000_2325"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_039861_1225"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_043853_2200"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_045875_2445"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_045973_2440"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_046747_2220"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_051070_1285"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_073077_2155"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_036085_2455"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_036658_2550"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_036836_2360"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"
+
+  - id: "ESP_059453_1335"
+    npy_bands: 3
+    npy: ["hipredict"]
+    tif_bands: 3
+    tif: ["hipredict", "SYN4"]
+    cub: []
+    description: "icy craters"

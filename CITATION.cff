@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use HiPredict, please cite it using the metadata below."
+title: HiPredict
+abstract: >-
+  Deep-learning reconstruction of the HiRISE RED4 band for observations where
+  it is missing after the RED4 detector's partial failure. Includes the full
+  workflow: downloading HiRISE observations, radiometric preprocessing,
+  training, evaluation and inference, plus the SYN4 baseline.
+type: software
+authors:
+  - family-names: Suphi
+    given-names: Ardan
+    orcid: "https://orcid.org/0009-0004-3555-6858"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/ardan-S/HiPredict"
+keywords:
+  - HiRISE
+  - Mars
+  - Mars Reconnaissance Orbiter
+  - planetary science
+  - image reconstruction
+  - deep learning

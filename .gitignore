@@ -1,0 +1,34 @@
+# Runtime data: everything under files/ except the tracked reference files
+files/*
+!files/README.md
+!files/global_stats.json
+!files/*.txt
+
+# Model weights and locally trained models
+models/
+*.pt
+*.pth
+*.safetensors
+*.joblib
+
+# HiRISE and ISIS products
+*.IMG
+*.img
+*.cub
+*.tif
+*.prt
+
+# Experiment tracking and logs
+wandb/
+logs/
+
+# Python, build and tool caches
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.cache/
+.vscode/
