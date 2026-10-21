@@ -102,8 +102,7 @@ def read_checkpoint(path: str) -> dict:
         checkpoint = torch.load(path, map_location="cpu", weights_only=True)
     except pickle.UnpicklingError as error:
         raise ValueError(
-            f"{path} is not a {CHECKPOINT_FORMAT} checkpoint. Convert irp-ed425 "
-            "checkpoints with `python -m hipredict.diffusion.convert_checkpoint`."
+            f"{path} is not a supported {CHECKPOINT_FORMAT} checkpoint"
         ) from error
     if not isinstance(checkpoint, dict) or checkpoint.get("format") != CHECKPOINT_FORMAT:
         raise ValueError(f"{path} is not a {CHECKPOINT_FORMAT} checkpoint")

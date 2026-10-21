@@ -5,18 +5,11 @@ import torch
 
 from hipredict.diffusion.config import IR10_GLOBAL_CENTER, IR10_GLOBAL_SCALE
 
-# irp-ed425 records store absolute paths under this directory; HiPredict
-# records store paths relative to the CSV file.
-LEGACY_TILE_ROOT = "npy_files_all"
+TILE_ROOT = "npy_files_all"
 
 
-def resolve_record_path(csv_value, csv_path, data_path, marker=LEGACY_TILE_ROOT):
+def resolve_record_path(csv_value, csv_path, data_path, marker=TILE_ROOT):
     """Resolve a record 'Path' entry to the tile on disk.
-
-    Absolute paths are used as they are, and relative paths resolve against the
-    CSV's folder (HiPredict records). Only when that file does not exist and
-    the path sits under ``marker`` is it re-rooted under ``data_path``, for
-    irp-ed425 records whose tile tree has moved.
     """
     path = Path(csv_value)
     resolved = path if path.is_absolute() else Path(csv_path).resolve().parent / path

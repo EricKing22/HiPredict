@@ -254,9 +254,6 @@ def run_single_image_inference(
 
 def _relative_tile_path(csv_value: str) -> Path:
     """Return the tile path relative to its tile root.
-
-    The root is 'npy_files_all' for irp-ed425 records, and the first directory
-    of the CSV-relative path (e.g. 'npy_files') for HiPredict records.
     """
     path = Path(csv_value)
     parts = path.parts

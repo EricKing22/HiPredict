@@ -33,7 +33,6 @@ Run from the directory where outputs should go. Relative defaults such as `outpu
 | `python -m hipredict.diffusion.inference.inference` | Predict single images, or a whole test split |
 | `python -m hipredict.diffusion.dataset.EDA` | Dataset statistics and the conditional-mean fit |
 | `python -m hipredict.diffusion.models.brightness` | Train the RED3 boundary brightness head |
-| `python -m hipredict.diffusion.convert_checkpoint` | Convert irp-ed425 checkpoints (see [Checkpoints](#checkpoints)) |
 
 ## Train
 
@@ -141,16 +140,3 @@ The FM networks attend over every position of their input, so memory grows with 
 ## Checkpoints
 
 Training writes versioned checkpoints holding the model and training settings (including the normalisation), the weights, the EMA weights and the optimiser state. They are plain tensors and dictionaries and load with `torch.load(..., weights_only=True)`; no pickled classes are involved. `load_checkpoint` uses the EMA weights when present.
-
-Checkpoints from irp-ed425 store their settings as pickled classes and must be converted once. Only convert files from a trusted source, because reading them runs pickled code:
-
-```bash
-python -m hipredict.diffusion.convert_checkpoint old/latest.pt outputs/models/latest.pt
-python -m hipredict.diffusion.convert_checkpoint old/latest.pt outputs/models/weights.pt --weights_only
-```
-
-A full conversion keeps the optimiser state, so training can resume. `--weights_only` keeps the EMA weights and settings only, about a quarter of the size, and is enough for evaluation and inference. Checkpoints that used MAD normalisation, or a model type that is no longer provided, are rejected; those trained with a retired loss term can only be converted with `--weights_only`.
-
-## Provenance
-
-The models and training code were developed in [irp-ed425](https://github.com/ese-ada-lovelace-2025/irp-ed425), an Imperial College London MSc project, and adapted to HiPredict's data layout, metrics and inference API.
