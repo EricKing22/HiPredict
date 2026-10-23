@@ -2,7 +2,7 @@
 
 `hipredict.diffusion` adds conditional diffusion (DDPM) and flow-matching (FM) models that reconstruct HiRISE **RED4 ↔ IR10**. FM models can also be run through the HiPredict inference API. The module is self-contained: nothing else in HiPredict imports it.
 
-No pretrained diffusion or FM weights are distributed. Train a model first (see [Train](#train)).
+Pretrained FM weights are available on Hugging Face; see the [checkpoint links and download example](../hipredict/diffusion/README.md). To train a model, see [Train](#train).
 
 ## Install
 
